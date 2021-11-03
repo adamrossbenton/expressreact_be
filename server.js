@@ -95,6 +95,17 @@ app.post("/people", async (req,res) => {
     }
 })
 
+// People Show
+app.get("/people/:id", async (req,res) => {
+    try {
+        res.json(
+            await People.findById(req.params.id)
+        )
+    } catch (err) {
+        res.status(400).json(err)
+    }
+})
+
 ////////////////////////////////////////////////
 // Listener
 ////////////////////////////////////////////////
