@@ -49,8 +49,37 @@ app.use(morgan("dev"))
 app.use(express.json())
 
 ////////////////////////////////////////////////
+// Seed Data
+////////////////////////////////////////////////
+
+const people = [
+    {
+        name: "Sterling Archer",
+        image: "https://static.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437",
+        title: "World's Greatest Secret Agent",
+    },
+    {
+        name: "Cyril Figgis",
+        image: "https://static.wikia.nocookie.net/archer/images/d/dc/Cyril_Figgis.png/revision/latest?cb=20141013063526",
+        title: "ISIS Comptroller",
+    },
+    {
+        name: "Lana Kane",
+        image: "https://static.wikia.nocookie.net/archer/images/e/e8/Lana_Kane.png/revision/latest?cb=20151013033343",
+        title: "Archer's babysitter",
+    }
+]
+
+////////////////////////////////////////////////
 // Routes
 ////////////////////////////////////////////////
+
+// Seed
+app.get("/people/seed", async (req,res) => {
+    await People.deleteMany({})
+    const startPeople = await People.create(people)
+    res.json(startPeople)
+})
 
 // Test
 app.get("/", (req,res) => {
