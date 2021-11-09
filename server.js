@@ -55,17 +55,17 @@ app.use(express.json())
 const people = [
     {
         name: "Sterling Archer",
-        image: "https://static.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437",
+        image: "https://miro.medium.com/max/1000/0*MBbFTmYOojEXNhMI.png",
         title: "World's Greatest Secret Agent",
     },
     {
         name: "Cyril Figgis",
-        image: "https://static.wikia.nocookie.net/archer/images/d/dc/Cyril_Figgis.png/revision/latest?cb=20141013063526",
+        image: "https://i.imgur.com/aypgP.jpg",
         title: "ISIS Comptroller",
     },
     {
         name: "Lana Kane",
-        image: "https://static.wikia.nocookie.net/archer/images/e/e8/Lana_Kane.png/revision/latest?cb=20151013033343",
+        image: "https://cdn.costumewall.com/wp-content/uploads/2017/02/lana-kane.jpg",
         title: "Archer's babysitter",
     }
 ]
